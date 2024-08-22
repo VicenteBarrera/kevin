@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Welcome";
+}
+
+<style>
+    .center-text {
+        text-align: center;
+        margin-top: 20vh; /* Centra verticalmente en la página */
+    }
+</style>
+
+<div class="center-text">
+    <h1>Bienvenidos</h1>
+    <p>¡Bienvenido al sistema, @ViewData["Username"]! Tu login ha sido exitoso.</p>
+    <form asp-action="Logout" asp-controller="Auth" method="post">
+        <button type="submit" class="btn btn-warning">Cerrar Sesión</button>
+    </form>
+</div>
